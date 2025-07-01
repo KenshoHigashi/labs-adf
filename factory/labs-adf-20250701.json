@@ -1,0 +1,23 @@
+{
+	"name": "labs-adf-20250701",
+	"location": "japaneast",
+	"identity": {
+		"type": "SystemAssigned,UserAssigned",
+		"principalId": "43b99628-a9e0-47bb-98ab-adbfd3e78b82",
+		"tenantId": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+		"userAssignedIdentities": {
+			"/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourcegroups/rb10/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rb10usermanaged_stg": {
+				"clientId": "01b410a7-169d-4373-ae76-8cace949973d",
+				"principalId": "8835fcd0-2332-4497-a831-b15a356c03ce"
+			},
+			"/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourcegroups/rb10/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rb10usermanaged_dev": {
+				"clientId": "a448d930-a021-4fb7-b789-0f7ab5461d4c",
+				"principalId": "9c352905-7a18-4309-9fb2-28c599fe1f96"
+			},
+			"/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourcegroups/rb10/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rb10usermanaged_prod": {
+				"clientId": "ff54f0c4-fb96-435a-9583-ba52504b133e",
+				"principalId": "c24b1d40-9406-4d02-9403-97b14fa8379f"
+			}
+		}
+	}
+}

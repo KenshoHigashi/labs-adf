@@ -4,10 +4,10 @@
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"serviceEndpoint": "https://labsstorageaccountpstg.blob.core.windows.net/",
+			"serviceEndpoint": "https://labsstorageaccountprod.blob.core.windows.net/",
 			"accountKind": "StorageV2",
 			"credential": {
-				"referenceName": "credential_stg",
+				"referenceName": "credential_prod",
 				"type": "CredentialReference"
 			}
 		}

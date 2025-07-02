@@ -7,7 +7,7 @@
 			"serviceEndpoint": "https://labsstorageaccountpdev.blob.core.windows.net/",
 			"accountKind": "StorageV2",
 			"credential": {
-				"referenceName": "credential_dev",
+				"referenceName": "credential_stg",
 				"type": "CredentialReference"
 			}
 		}

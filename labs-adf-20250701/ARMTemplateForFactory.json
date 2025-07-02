@@ -7,13 +7,24 @@
 			"metadata": "データ ファクトリ名",
 			"defaultValue": "labs-adf-20250701"
 		},
-		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+		"managedIdentityResourceId": {
 			"type": "string",
-			"defaultValue": "https://labsstorageaccountpdev.blob.core.windows.net/"
+			"defaultValue": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourceGroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_dev",
+			"metadata": {
+				"description": "使用するマネージドIDのリソースID"
+			}
+		},
+		"storageEndpoint": {
+			"type": "string",
+			"defaultValue": "https://labsstorageaccountpdev.blob.core.windows.net/",
+			"metadata": {
+				"description": "使用するストレージエンドポイント"
+			}
 		}
 	},
 	"variables": {
-		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]",
+		"credentialName": "[last(split(parameters('managedIdentityResourceId'), '/'))]"
 	},
 	"resources": [
 		{
@@ -178,50 +189,26 @@
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"serviceEndpoint": "[parameters('AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]",
+					"serviceEndpoint": "[parameters('storageEndpoint')]",
 					"accountKind": "StorageV2",
 					"credential": {
-						"referenceName": "credential_dev",
+						"referenceName": "[variables('credentialName')]",
 						"type": "CredentialReference"
 					}
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/credentials/credential_dev')]"
+				"[concat(variables('factoryId'), '/credentials/', variables('credentialName'))]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/credential_dev')]",
+			"name": "[concat(parameters('factoryName'), '/', variables('credentialName'))]",
 			"type": "Microsoft.DataFactory/factories/credentials",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"type": "ManagedIdentity",
 				"typeProperties": {
-					"resourceId": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourceGroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_dev"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/credential_prod')]",
-			"type": "Microsoft.DataFactory/factories/credentials",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"type": "ManagedIdentity",
-				"typeProperties": {
-					"resourceId": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourcegroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_prod"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/credential_stg')]",
-			"type": "Microsoft.DataFactory/factories/credentials",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"type": "ManagedIdentity",
-				"typeProperties": {
-					"resourceId": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourcegroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_stg"
+					"resourceId": "[parameters('managedIdentityResourceId')]"
 				}
 			},
 			"dependsOn": []

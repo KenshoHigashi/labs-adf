@@ -9,7 +9,7 @@
 		},
 		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
-			"defaultValue": "https://labsstorageaccountpdev.blob.core.windows.net/"
+			"defaultValue": "https://labsstorageaccountprod.blob.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",

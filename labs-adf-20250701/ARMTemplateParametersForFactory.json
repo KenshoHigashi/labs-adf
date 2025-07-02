@@ -5,11 +5,8 @@
 		"factoryName": {
 			"value": "labs-adf-20250701"
 		},
-		"managedIdentityResourceId": {
-			"value": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourceGroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_dev"
-		},
-		"storageEndpoint": {
-			"value": "https://labsstorageaccountpdev.blob.core.windows.net/"
+		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+			"value": "https://labsstorageaccountprod.blob.core.windows.net/"
 		}
 	}
 }

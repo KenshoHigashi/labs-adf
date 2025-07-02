@@ -6,7 +6,7 @@
 			"value": "labs-adf-20250701"
 		},
 		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
-			"value": "https://labsstorageaccountpdev.blob.core.windows.net/"
+			"value": "https://labsstorageaccountprod.blob.core.windows.net/"
 		},
 		"containerUri": {
 			"value": ""

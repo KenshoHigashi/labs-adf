@@ -9,7 +9,7 @@
 		},
 		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
-			"defaultValue": "https://labsstorageaccountpdev.blob.core.windows.net/"
+			"defaultValue": "https://labsstorageaccountprod.blob.core.windows.net/"
 		}
 	},
 	"variables": {
@@ -63,13 +63,13 @@
 					"serviceEndpoint": "[parameters('AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]",
 					"accountKind": "StorageV2",
 					"credential": {
-						"referenceName": "credential_dev",
+						"referenceName": "credential_prod",
 						"type": "CredentialReference"
 					}
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/credentials/credential_dev')]"
+				"[concat(variables('factoryId'), '/credentials/credential_prod')]"
 			]
 		},
 		{

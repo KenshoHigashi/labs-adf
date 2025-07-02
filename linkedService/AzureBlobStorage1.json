@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"serviceEndpoint": "https://labsstorageaccountpdev.blob.core.windows.net/",
+			"serviceEndpoint": "https://labsstorageaccountpstg.blob.core.windows.net/",
 			"accountKind": "StorageV2",
 			"credential": {
 				"referenceName": "credential_stg",

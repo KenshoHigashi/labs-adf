@@ -5,19 +5,24 @@
         "*": {
           "value": "="
         }
+      },
+      "globalConfigurations": {
+        "*": "="
+      },
+      "encryption": {
+        "*": "=",
+        "identity": {
+          "*": "="
+        }
       }
     },
-    "location": "="
-  },
-  "Microsoft.DataFactory/factories/globalparameters": {
-    "properties": {
-      "*": {
-        "value": "="
-      }
+    "location": "=",
+    "identity": {
+      "type": "=",
+      "userAssignedIdentities": "="
     }
   },
   "Microsoft.DataFactory/factories/pipelines": {},
-  "Microsoft.DataFactory/factories/dataflows": {},
   "Microsoft.DataFactory/factories/integrationRuntimes": {
     "properties": {
       "typeProperties": {
@@ -60,7 +65,8 @@
           "parameters": {
             "*": "="
           }
-        }
+        },
+        "pipelineReference.referenceName"
       ],
       "pipeline": {
         "parameters": {
@@ -77,13 +83,17 @@
       "properties": {
         "typeProperties": {
           "accountName": "=",
+          "accountEndpoint": "=",
           "username": "=",
           "userName": "=",
           "accessKeyId": "=",
+          "endpoint": "=",
           "servicePrincipalId": "=",
           "userId": "=",
           "host": "=",
+          "role": "=",
           "clientId": "=",
+          "existingClusterId": "=",
           "clusterUserName": "=",
           "clusterSshUserName": "=",
           "hostSubscriptionId": "=",
@@ -107,7 +117,8 @@
           "sasUri": "|:-sasUri:secureString",
           "sasToken": "|",
           "connectionString": "|:-connectionString:secureString",
-          "hostKeyFingerprint": "="
+          "hostKeyFingerprint": "=",
+          "mlWorkspaceName": "="
         }
       }
     },
@@ -132,9 +143,27 @@
       }
     }
   },
+  "Microsoft.DataFactory/factories/credentials": {
+    "*": {
+      "properties": {
+        "typeProperties": {
+          "token": "="
+        }
+      }
+    }
+  },
   "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints": {
     "properties": {
-      "*": "="
+      "privateLinkResourceId": "=",
+      "groupId": "=",
+      "fqdns": "="
+    }
+  },
+  "Microsoft.DataFactory/factories/globalparameters": {
+    "properties": {
+      "*": {
+        "value": "="
+      }
     }
   }
 }

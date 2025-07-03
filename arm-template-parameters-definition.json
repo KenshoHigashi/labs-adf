@@ -1,40 +1,140 @@
 {
-  "parameters": {
-    "factoryName": {
-      "type": "string",
-      "metadata": { 
-        "description": "データ ファクトリ名" 
+  "Microsoft.DataFactory/factories": {
+    "properties": {
+      "globalParameters": {
+        "*": {
+          "value": "="
+        }
+      }
+    },
+    "location": "="
+  },
+  "Microsoft.DataFactory/factories/globalparameters": {
+    "properties": {
+      "*": {
+        "value": "="
+      }
+    }
+  },
+  "Microsoft.DataFactory/factories/pipelines": {},
+  "Microsoft.DataFactory/factories/dataflows": {},
+  "Microsoft.DataFactory/factories/integrationRuntimes": {
+    "properties": {
+      "typeProperties": {
+        "ssisProperties": {
+          "catalogInfo": {
+            "catalogServerEndpoint": "=",
+            "catalogAdminUserName": "=",
+            "catalogAdminPassword": {
+              "value": "-::secureString"
+            }
+          },
+          "customSetupScriptProperties": {
+            "sasToken": {
+              "value": "-::secureString"
+            }
+          }
         },
-      "defaultValue": "labs-adf-20250701"
-    },
-    "subscriptionId": {
-      "type": "string",
-      "defaultValue": "1e59e522-0988-4b3e-9d49-ba7db35962dd",
-      "metadata": {
-        "description": "マネージドIDが存在するサブスクリプションID"
+        "linkedInfo": {
+          "key": {
+            "value": "-::secureString"
+          },
+          "resourceId": "="
+        },
+        "computeProperties": {
+          "dataFlowProperties": {
+            "externalComputeInfo": [
+              {
+                "accessToken": "-::secureString"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Microsoft.DataFactory/factories/triggers": {
+    "properties": {
+      "pipelines": [
+        {
+          "parameters": {
+            "*": "="
+          }
+        }
+      ],
+      "pipeline": {
+        "parameters": {
+          "*": "="
+        }
+      },
+      "typeProperties": {
+        "scope": "="
+      }
+    }
+  },
+  "Microsoft.DataFactory/factories/linkedServices": {
+    "*": {
+      "properties": {
+        "typeProperties": {
+          "accountName": "=",
+          "username": "=",
+          "userName": "=",
+          "accessKeyId": "=",
+          "servicePrincipalId": "=",
+          "userId": "=",
+          "host": "=",
+          "clientId": "=",
+          "clusterUserName": "=",
+          "clusterSshUserName": "=",
+          "hostSubscriptionId": "=",
+          "clusterResourceGroup": "=",
+          "subscriptionId": "=",
+          "resourceGroupName": "=",
+          "tenant": "=",
+          "dataLakeStoreUri": "=",
+          "baseUrl": "=",
+          "database": "=",
+          "serviceEndpoint": "=",
+          "batchUri": "=",
+          "poolName": "=",
+          "databaseName": "=",
+          "systemNumber": "=",
+          "server": "=",
+          "url": "=",
+          "functionAppUrl": "=",
+          "environmentUrl": "=",
+          "aadResourceId": "=",
+          "sasUri": "|:-sasUri:secureString",
+          "sasToken": "|",
+          "connectionString": "|:-connectionString:secureString",
+          "hostKeyFingerprint": "="
+        }
       }
     },
-    "resourceGroupName": {
-      "type": "string",
-      "defaultValue": "labs",
-      "metadata": {
-        "description": "マネージドIDが存在するリソースグループ名"
+    "Odbc": {
+      "properties": {
+        "typeProperties": {
+          "userName": "=",
+          "connectionString": {
+            "secretName": "="
+          }
+        }
       }
-    },
-    "credentialName": {
-      "type": "string",
-      "allowedValues": ["labs_id_dev", "labs_id_stg", "labs_id_prod"],
-      "defaultValue": "labs_id_dev",
-      "metadata": {
-        "description": "使用するマネージドIDの名前"
+    }
+  },
+  "Microsoft.DataFactory/factories/datasets": {
+    "*": {
+      "properties": {
+        "typeProperties": {
+          "folderPath": "=",
+          "fileName": "="
+        }
       }
-    },
-    "storageEndpoint": {
-      "type": "string",
-      "defaultValue": "https://labsstorageaccountpdev.blob.core.windows.net/",
-      "metadata": {
-        "description": "使用するストレージエンドポイント"
-      }
+    }
+  },
+  "Microsoft.DataFactory/factories/managedVirtualNetworks/managedPrivateEndpoints": {
+    "properties": {
+      "*": "="
     }
   }
 }

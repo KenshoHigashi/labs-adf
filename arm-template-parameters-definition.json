@@ -3,7 +3,7 @@
     "AzureBlobStorage": {
       "properties": {
         "typeProperties": {
-          "serviceEndpoint": "="
+          "serviceEndpoint": "=:sep"
         }
       }
     }

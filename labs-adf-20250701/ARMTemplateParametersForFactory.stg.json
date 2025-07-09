@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "factoryName": {
+      "value": "labs-adf-20250701"
+    },
+    "subscriptionId": {
+      "value": "1e59e522-0988-4b3e-9d49-ba7db35962dd"
+    },
+    "resourceGroupName": {
+      "value": "labs"
+    },
+    "credentialName": {
+      "value": "labs_id_stg"
+    },
+    "storageEndpoint": {
+      "value": "https://labsstorageaccountpstg.blob.core.windows.net/"
+    }
+  }
+}

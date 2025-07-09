@@ -6,6 +6,10 @@
 			"type": "string",
 			"metadata": "データ ファクトリ名",
 			"defaultValue": "labs-adf-20250701"
+		},
+		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+			"type": "string",
+			"defaultValue": "https://labsstorageaccountprod.blob.core.windows.net/"
 		}
 	},
 	"variables": {
@@ -56,7 +60,7 @@
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"serviceEndpoint": "https://labsstorageaccountprod.blob.core.windows.net/",
+					"serviceEndpoint": "[parameters('AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]",
 					"accountKind": "StorageV2",
 					"credential": {
 						"referenceName": "credential_prod",

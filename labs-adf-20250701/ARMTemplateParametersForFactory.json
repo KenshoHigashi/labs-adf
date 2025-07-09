@@ -4,6 +4,9 @@
 	"parameters": {
 		"factoryName": {
 			"value": "labs-adf-20250701"
+		},
+		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+			"value": "https://labsstorageaccountprod.blob.core.windows.net/"
 		}
 	}
 }

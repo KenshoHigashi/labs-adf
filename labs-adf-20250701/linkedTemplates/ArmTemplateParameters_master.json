@@ -8,6 +8,18 @@
 		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"value": "https://labsstorageaccountprod.blob.core.windows.net/"
 		},
+		"AzureBlobStorage2_properties_typeProperties_serviceEndpoint": {
+			"value": "https://labsstorageaccountpdev.blob.core.windows.net/"
+		},
+		"credential_dev_properties_typeProperties_rid": {
+			"value": ""
+		},
+		"credential_prod_properties_typeProperties_rid": {
+			"value": ""
+		},
+		"credential_stg_properties_typeProperties_rid": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},

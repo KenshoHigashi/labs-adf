@@ -16,11 +16,11 @@
 		"credential_stg_properties_typeProperties_rid": {
 			"type": "string"
 		},
-		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+		"AzureBlobStorage1_properties_typeProperties_sep": {
 			"type": "string",
 			"defaultValue": "https://labsstorageaccountprod.blob.core.windows.net/"
 		},
-		"AzureBlobStorage2_properties_typeProperties_serviceEndpoint": {
+		"AzureBlobStorage2_properties_typeProperties_sep": {
 			"type": "string",
 			"defaultValue": "https://labsstorageaccountpdev.blob.core.windows.net/"
 		}
@@ -73,7 +73,7 @@
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"serviceEndpoint": "[parameters('AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]",
+					"serviceEndpoint": "[parameters('AzureBlobStorage1_properties_typeProperties_sep')]",
 					"accountKind": "StorageV2",
 					"credential": {
 						"referenceName": "credential_prod",
@@ -93,7 +93,7 @@
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"serviceEndpoint": "[parameters('AzureBlobStorage2_properties_typeProperties_serviceEndpoint')]",
+					"serviceEndpoint": "[parameters('AzureBlobStorage2_properties_typeProperties_sep')]",
 					"accountKind": "StorageV2",
 					"credential": {
 						"referenceName": "credential_dev",

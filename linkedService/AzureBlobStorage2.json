@@ -1,0 +1,15 @@
+{
+	"name": "AzureBlobStorage2",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://labsstorageaccountpdev.blob.core.windows.net/",
+			"accountKind": "StorageV2",
+			"credential": {
+				"referenceName": "credential_dev",
+				"type": "CredentialReference"
+			}
+		}
+	}
+}

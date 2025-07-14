@@ -299,10 +299,15 @@
 						"referenceName": "credential_prod",
 						"type": "CredentialReference"
 					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime1",
+					"type": "IntegrationRuntimeReference"
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/credentials/credential_prod')]"
+				"[concat(variables('factoryId'), '/credentials/credential_prod')]",
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
 			]
 		},
 		{

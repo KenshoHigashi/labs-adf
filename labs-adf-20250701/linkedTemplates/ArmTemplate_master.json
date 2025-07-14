@@ -15,6 +15,18 @@
 			"type": "string",
 			"defaultValue": "https://labsstorageaccountpdev.blob.core.windows.net/"
 		},
+		"credential_dev_properties_typeProperties_resourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourceGroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_dev"
+		},
+		"credential_prod_properties_typeProperties_resourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourcegroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_prod"
+		},
+		"credential_stg_properties_typeProperties_resourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourcegroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_stg"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "リンクされた ARM テンプレートを含むストレージ アカウントの URI"
@@ -41,6 +53,15 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"credential_dev_properties_typeProperties_resourceId": {
+						"value": "[parameters('credential_dev_properties_typeProperties_resourceId')]"
+					},
+					"credential_prod_properties_typeProperties_resourceId": {
+						"value": "[parameters('credential_prod_properties_typeProperties_resourceId')]"
+					},
+					"credential_stg_properties_typeProperties_resourceId": {
+						"value": "[parameters('credential_stg_properties_typeProperties_resourceId')]"
 					},
 					"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 						"value": "[parameters('AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]"

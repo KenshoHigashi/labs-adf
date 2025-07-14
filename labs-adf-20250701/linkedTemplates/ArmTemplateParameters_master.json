@@ -11,6 +11,15 @@
 		"AzureBlobStorage2_properties_typeProperties_serviceEndpoint": {
 			"value": "https://labsstorageaccountpdev.blob.core.windows.net/"
 		},
+		"credential_dev_properties_typeProperties_resourceId": {
+			"value": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourceGroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_dev"
+		},
+		"credential_prod_properties_typeProperties_resourceId": {
+			"value": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourcegroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_prod"
+		},
+		"credential_stg_properties_typeProperties_resourceId": {
+			"value": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourcegroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_stg"
+		},
 		"containerUri": {
 			"value": ""
 		},

@@ -144,11 +144,10 @@
     }
   },
   "Microsoft.DataFactory/factories/credentials": {
-    "*": {
-      "properties": {
-        "typeProperties": {
-          "resourceId": "="
-        }
+    "properties": {
+      "typeProperties": {
+        "token": "=",
+        "resourceId": "="
       }
     }
   },

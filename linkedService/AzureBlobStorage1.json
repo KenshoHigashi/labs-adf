@@ -10,10 +10,6 @@
 				"referenceName": "credential_prod",
 				"type": "CredentialReference"
 			}
-		},
-		"connectVia": {
-			"referenceName": "integrationRuntime1",
-			"type": "IntegrationRuntimeReference"
 		}
 	}
 }

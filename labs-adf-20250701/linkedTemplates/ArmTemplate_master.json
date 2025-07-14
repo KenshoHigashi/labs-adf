@@ -63,11 +63,11 @@
 					"credential_stg_properties_typeProperties_resourceId": {
 						"value": "[parameters('credential_stg_properties_typeProperties_resourceId')]"
 					},
-					"AzureBlobStorage2_properties_typeProperties_serviceEndpoint": {
-						"value": "[parameters('AzureBlobStorage2_properties_typeProperties_serviceEndpoint')]"
-					},
 					"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 						"value": "[parameters('AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]"
+					},
+					"AzureBlobStorage2_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('AzureBlobStorage2_properties_typeProperties_serviceEndpoint')]"
 					}
 				}
 			},

@@ -7,22 +7,13 @@
 			"metadata": "データ ファクトリ名",
 			"defaultValue": "labs-adf-20250701"
 		},
-		"AzureBlobStorage1_properties_typeProperties_sep": {
+		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
 			"defaultValue": "https://labsstorageaccountprod.blob.core.windows.net/"
 		},
-		"AzureBlobStorage2_properties_typeProperties_sep": {
+		"AzureBlobStorage2_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
 			"defaultValue": "https://labsstorageaccountpdev.blob.core.windows.net/"
-		},
-		"credential_dev_properties_typeProperties_rid": {
-			"type": "string"
-		},
-		"credential_prod_properties_typeProperties_rid": {
-			"type": "string"
-		},
-		"credential_stg_properties_typeProperties_rid": {
-			"type": "string"
 		},
 		"containerUri": {
 			"type": "string",
@@ -51,20 +42,11 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"credential_dev_properties_typeProperties_rid": {
-						"value": "[parameters('credential_dev_properties_typeProperties_rid')]"
+					"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]"
 					},
-					"credential_prod_properties_typeProperties_rid": {
-						"value": "[parameters('credential_prod_properties_typeProperties_rid')]"
-					},
-					"credential_stg_properties_typeProperties_rid": {
-						"value": "[parameters('credential_stg_properties_typeProperties_rid')]"
-					},
-					"AzureBlobStorage1_properties_typeProperties_sep": {
-						"value": "[parameters('AzureBlobStorage1_properties_typeProperties_sep')]"
-					},
-					"AzureBlobStorage2_properties_typeProperties_sep": {
-						"value": "[parameters('AzureBlobStorage2_properties_typeProperties_sep')]"
+					"AzureBlobStorage2_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('AzureBlobStorage2_properties_typeProperties_serviceEndpoint')]"
 					}
 				}
 			},

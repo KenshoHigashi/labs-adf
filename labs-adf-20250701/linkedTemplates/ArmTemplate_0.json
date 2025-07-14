@@ -7,20 +7,11 @@
 			"metadata": "データ ファクトリ名",
 			"defaultValue": "labs-adf-20250701"
 		},
-		"credential_dev_properties_typeProperties_rid": {
-			"type": "string"
-		},
-		"credential_prod_properties_typeProperties_rid": {
-			"type": "string"
-		},
-		"credential_stg_properties_typeProperties_rid": {
-			"type": "string"
-		},
-		"AzureBlobStorage1_properties_typeProperties_sep": {
+		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
 			"defaultValue": "https://labsstorageaccountprod.blob.core.windows.net/"
 		},
-		"AzureBlobStorage2_properties_typeProperties_sep": {
+		"AzureBlobStorage2_properties_typeProperties_serviceEndpoint": {
 			"type": "string",
 			"defaultValue": "https://labsstorageaccountpdev.blob.core.windows.net/"
 		}
@@ -36,7 +27,7 @@
 			"properties": {
 				"type": "ManagedIdentity",
 				"typeProperties": {
-					"resourceId": "[parameters('credential_dev_properties_typeProperties_rid')]"
+					"resourceId": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourceGroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_dev"
 				}
 			},
 			"dependsOn": []
@@ -48,7 +39,7 @@
 			"properties": {
 				"type": "ManagedIdentity",
 				"typeProperties": {
-					"resourceId": "[parameters('credential_prod_properties_typeProperties_rid')]"
+					"resourceId": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourcegroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_prod"
 				}
 			},
 			"dependsOn": []
@@ -60,7 +51,7 @@
 			"properties": {
 				"type": "ManagedIdentity",
 				"typeProperties": {
-					"resourceId": "[parameters('credential_stg_properties_typeProperties_rid')]"
+					"resourceId": "/subscriptions/1e59e522-0988-4b3e-9d49-ba7db35962dd/resourcegroups/labs/providers/Microsoft.ManagedIdentity/userAssignedIdentities/labs_id_stg"
 				}
 			},
 			"dependsOn": []
@@ -73,7 +64,7 @@
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"serviceEndpoint": "[parameters('AzureBlobStorage1_properties_typeProperties_sep')]",
+					"serviceEndpoint": "[parameters('AzureBlobStorage1_properties_typeProperties_serviceEndpoint')]",
 					"accountKind": "StorageV2",
 					"credential": {
 						"referenceName": "credential_prod",
@@ -93,7 +84,7 @@
 				"annotations": [],
 				"type": "AzureBlobStorage",
 				"typeProperties": {
-					"serviceEndpoint": "[parameters('AzureBlobStorage2_properties_typeProperties_sep')]",
+					"serviceEndpoint": "[parameters('AzureBlobStorage2_properties_typeProperties_serviceEndpoint')]",
 					"accountKind": "StorageV2",
 					"credential": {
 						"referenceName": "credential_dev",
